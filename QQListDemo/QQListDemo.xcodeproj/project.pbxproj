@@ -34,6 +34,7 @@
 		8E3D39201A5E91CC00FDCB0F /* friendsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E3D391F1A5E91CC00FDCB0F /* friendsList.plist */; };
 		8EF0987D1A6645CB0044DC91 /* PWSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF0987C1A6645CB0044DC91 /* PWSliderViewController.m */; };
 		8EF098811A66461A0044DC91 /* PWCaptureImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF098801A66461A0044DC91 /* PWCaptureImage.m */; };
+		8EF098861A6654C80044DC91 /* contact_addItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EF098851A6654C80044DC91 /* contact_addItem@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		8EF0987C1A6645CB0044DC91 /* PWSliderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWSliderViewController.m; sourceTree = "<group>"; };
 		8EF0987F1A66461A0044DC91 /* PWCaptureImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWCaptureImage.h; sourceTree = "<group>"; };
 		8EF098801A66461A0044DC91 /* PWCaptureImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWCaptureImage.m; sourceTree = "<group>"; };
+		8EF098851A6654C80044DC91 /* contact_addItem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "contact_addItem@2x.png"; path = "../PublicClass/OtherClass/contact_addItem@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 				8E3D38D01A5E82D800FDCB0F /* ViewController.m */,
 				8E3D38D21A5E82D800FDCB0F /* Main.storyboard */,
 				8E3D38D51A5E82D800FDCB0F /* Images.xcassets */,
+				8EF098851A6654C80044DC91 /* contact_addItem@2x.png */,
 				8E3D38D71A5E82D800FDCB0F /* LaunchScreen.xib */,
 				8E3D38CC1A5E82D800FDCB0F /* QQListDemo.xcdatamodeld */,
 				8E3D38C51A5E82D800FDCB0F /* Supporting Files */,
@@ -357,6 +360,7 @@
 			files = (
 				8E3D38D41A5E82D800FDCB0F /* Main.storyboard in Resources */,
 				8E3D38D91A5E82D800FDCB0F /* LaunchScreen.xib in Resources */,
+				8EF098861A6654C80044DC91 /* contact_addItem@2x.png in Resources */,
 				8E3D39201A5E91CC00FDCB0F /* friendsList.plist in Resources */,
 				8E3D38D61A5E82D800FDCB0F /* Images.xcassets in Resources */,
 			);

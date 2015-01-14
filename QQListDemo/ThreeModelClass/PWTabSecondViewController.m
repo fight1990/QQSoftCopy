@@ -41,8 +41,11 @@
    
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     rightBtn.frame = CGRectMake(ScreenWidth-44, StatusBarHeight, 44, 44);
-    [rightBtn setTitle:@"右" forState:UIControlStateNormal];
+    rightBtn.showsTouchWhenHighlighted = YES;
+    [rightBtn setTitle:@"添加" forState:UIControlStateNormal];
+    rightBtn.titleLabel.font = [UIFont boldSystemFontOfSize:15];
     [rightBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [rightBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
     [rightBtn addTarget:self action:@selector(rightItemClick:) forControlEvents:UIControlEventTouchUpInside];
     [titleView addSubview:rightBtn];
     
