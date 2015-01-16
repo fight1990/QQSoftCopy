@@ -32,6 +32,8 @@
 		8E3D39131A5E910800FDCB0F /* TableViewHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D390F1A5E910800FDCB0F /* TableViewHeaderView.m */; };
 		8E3D39141A5E910800FDCB0F /* TableViewObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D39111A5E910800FDCB0F /* TableViewObject.m */; };
 		8E3D39201A5E91CC00FDCB0F /* friendsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E3D391F1A5E91CC00FDCB0F /* friendsList.plist */; };
+		8E68ECB81A6909600042944D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E68ECB71A6909600042944D /* Reachability.m */; };
+		8E68ECBE1A6911730042944D /* OMGToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E68ECBD1A6911730042944D /* OMGToast.m */; };
 		8EF0987D1A6645CB0044DC91 /* PWSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF0987C1A6645CB0044DC91 /* PWSliderViewController.m */; };
 		8EF098811A66461A0044DC91 /* PWCaptureImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF098801A66461A0044DC91 /* PWCaptureImage.m */; };
 		8EF098861A6654C80044DC91 /* contact_addItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EF098851A6654C80044DC91 /* contact_addItem@2x.png */; };
@@ -97,6 +99,10 @@
 		8E3D39101A5E910800FDCB0F /* TableViewObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewObject.h; sourceTree = "<group>"; };
 		8E3D39111A5E910800FDCB0F /* TableViewObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewObject.m; sourceTree = "<group>"; };
 		8E3D391F1A5E91CC00FDCB0F /* friendsList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = friendsList.plist; sourceTree = "<group>"; };
+		8E68ECB61A6909600042944D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		8E68ECB71A6909600042944D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		8E68ECBC1A6911730042944D /* OMGToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMGToast.h; sourceTree = "<group>"; };
+		8E68ECBD1A6911730042944D /* OMGToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OMGToast.m; sourceTree = "<group>"; };
 		8EF0987B1A6645CB0044DC91 /* PWSliderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWSliderViewController.h; sourceTree = "<group>"; };
 		8EF0987C1A6645CB0044DC91 /* PWSliderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWSliderViewController.m; sourceTree = "<group>"; };
 		8EF0987F1A66461A0044DC91 /* PWCaptureImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWCaptureImage.h; sourceTree = "<group>"; };
@@ -272,8 +278,12 @@
 		8EF0987E1A6645E80044DC91 /* OtherClass */ = {
 			isa = PBXGroup;
 			children = (
+				8E68ECB61A6909600042944D /* Reachability.h */,
+				8E68ECB71A6909600042944D /* Reachability.m */,
 				8EF0987F1A66461A0044DC91 /* PWCaptureImage.h */,
 				8EF098801A66461A0044DC91 /* PWCaptureImage.m */,
+				8E68ECBC1A6911730042944D /* OMGToast.h */,
+				8E68ECBD1A6911730042944D /* OMGToast.m */,
 			);
 			path = OtherClass;
 			sourceTree = "<group>";
@@ -391,12 +401,14 @@
 				8E3D39131A5E910800FDCB0F /* TableViewHeaderView.m in Sources */,
 				8E3D39141A5E910800FDCB0F /* TableViewObject.m in Sources */,
 				8E3D38FE1A5E846900FDCB0F /* PWTabFirstViewController.m in Sources */,
+				8E68ECBE1A6911730042944D /* OMGToast.m in Sources */,
 				8E3D39011A5E847C00FDCB0F /* PWTabSecondViewController.m in Sources */,
 				8E1EAE241A5F967B00E4D7BE /* PWSeparateDelegate.m in Sources */,
 				8E3D39041A5E848E00FDCB0F /* PWTabThreeViewController.m in Sources */,
 				8E02F9D01A639FD8001B7CF7 /* PWSearchView.m in Sources */,
 				8E3D38F81A5E844200FDCB0F /* PWLeftViewController.m in Sources */,
 				8E3D38CE1A5E82D800FDCB0F /* QQListDemo.xcdatamodeld in Sources */,
+				8E68ECB81A6909600042944D /* Reachability.m in Sources */,
 				8E1EAE191A5F799F00E4D7BE /* ODRefreshControl.m in Sources */,
 				8E1EAE0D1A5F6AEB00E4D7BE /* PWFriendsDetailViewController.m in Sources */,
 				8E3D38D11A5E82D800FDCB0F /* ViewController.m in Sources */,

@@ -13,4 +13,8 @@
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 
 #define StatusBarHeight [UIApplication sharedApplication].statusBarFrame.size.height
+
 #endif
+
+//网络监测参数：-1 —— 不可用；0 —— 3G可用；1 —— wife可用;2 —— 未知网络
+int networkState;

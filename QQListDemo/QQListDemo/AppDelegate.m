@@ -10,7 +10,13 @@
 #import "PWLeftViewController.h"
 #import "PWRightViewController.h"
 #import "ViewController.h"
-@interface AppDelegate ()
+#import "OMGToast.h"
+
+@interface AppDelegate () {
+
+    Reachability *_reach;
+    NetworkStatus _status;
+}
 
 @end
 
@@ -21,6 +27,7 @@
     // Override point for customization after application launch.
     self.window.frame = [UIScreen mainScreen].bounds;
     self.window.backgroundColor = [UIColor whiteColor];
+    [self startWatchingNetworkStatus]; 
     
     [PWSliderViewController sharedSliderViewController].leftViewController = [[PWLeftViewController alloc] init];
     [PWSliderViewController sharedSliderViewController].rightViewController = [[PWRightViewController alloc] init];
@@ -137,4 +144,48 @@
     }
 }
 
+#pragma mark Network Watching
+- (void)startWatchingNetworkStatus {
+    //监测网络状况
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+    _reach = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+    [_reach startNotifier];
+    _status = [_reach currentReachabilityStatus];
+}
+
+- (void)reachabilityChanged:(NSNotification* )note {
+    Reachability *curReach = [note object];
+    NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
+    
+    //检测站点的网络连接状态
+    NetworkStatus curStatus = [curReach currentReachabilityStatus];
+    if (curStatus != _status) {
+        NSString *str = nil;
+        
+        //根据不同的网络状态，UI或者程序中关于数据的下载需要做出相应的调整，自己实现
+        switch (curStatus) {
+            case NotReachable:
+                str = @"网络连接失败,请检查网络！";
+                networkState = -1;
+                [OMGToast showWithTextOnThread:str duration:2];
+                break;
+            case ReachableViaWiFi:
+                str = @"wifi网络可用";
+                networkState = 1;
+                break;
+            case ReachableViaWWAN:
+                str = @"3G/GPRS网络可用";
+                networkState = 0;
+                break;
+                
+            default:
+                str = @"未知网络";
+                networkState = 2;
+                break;
+        }
+        NSLog(@"%@", str);
+    }
+    
+    _status = curStatus;
+}
 @end
