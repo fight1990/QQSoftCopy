@@ -21,7 +21,7 @@
 + (instancetype)initWithHeaderView:(UITableView*)tableView {
 
     static NSString *identifier = @"header";
-    TableViewHeaderView *headerView = [tableView dequeueReusableCellWithIdentifier:identifier];
+    TableViewHeaderView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:identifier];
     if (!headerView) {
         headerView = [[TableViewHeaderView alloc] initWithReuseIdentifier:identifier];
     }
@@ -29,7 +29,7 @@
     return headerView;
 }
 - (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier {
-    self = [super init];
+    self = [super initWithReuseIdentifier:reuseIdentifier];
     if (self) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setBackgroundImage:[UIImage imageNamed:@"tableBtnNormal"] forState:UIControlStateNormal];
